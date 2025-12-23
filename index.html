@@ -1,219 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proton Donations</title>
+<meta charset="utf-8">
+<title>!𝙋𝚁𝙊𝙅𝙀𝙏 𝓟𝓻𝓸𝓽𝓸𝓷! 🎄😈</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- ===================== -->
-<!-- FAVICON / ICON CONFIG -->
-<!-- ===================== -->
-<link rel="icon" type="image/png" sizes="512x512" href="3165c085-b9be-40ff-aa3e-ac548daba8b6.png">
-<link rel="icon" type="image/png" sizes="32x32" href="3165c085-b9be-40ff-aa3e-ac548daba8b6.png">
-<link rel="icon" type="image/png" sizes="16x16" href="3165c085-b9be-40ff-aa3e-ac548daba8b6.png">
-<link rel="apple-touch-icon" sizes="180x180" href="3165c085-b9be-40ff-aa3e-ac548daba8b6.png">
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#7b4dff">
-<meta name="msapplication-TileColor" content="#ff4fd8">
+<!-- NEW FAVICON -->
+<link rel="icon" type="image/png" sizes="32x32" href="/mnt/data/748fb84e-f3a1-4a47-ac77-5b09f5ec9647.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/mnt/data/748fb84e-f3a1-4a47-ac77-5b09f5ec9647.png">
+<link rel="shortcut icon" href="/mnt/data/748fb84e-f3a1-4a47-ac77-5b09f5ec9647.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;600;900&display=swap" rel="stylesheet">
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #0c0c14;
-  color: #fff;
+body{
+  margin:0;font-family:'Exo 2',sans-serif;font-weight:bold;
+  color:black;
+  min-height:100vh;
+  background:linear-gradient(120deg,#ff69b4,#ff00ff,#800080,#ffffff,#ff1493);
+  background-size:400% 400%;
+  animation:gradientBG 20s ease infinite;
+  overflow-x:hidden;
 }
-
-header {
-  padding: 25px;
-  text-align: center;
-  background: linear-gradient(90deg, #ff4fd8, #7b4dff);
+@keyframes gradientBG{
+  0%{background-position:0% 50%}
+  25%{background-position:50% 50%}
+  50%{background-position:100% 50%}
+  75%{background-position:50% 50%}
+  100%{background-position:0% 50%}
 }
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
+header{
+  position:sticky;top:0;padding:16px 0;text-align:center;
+  background:linear-gradient(45deg,#ff0,#ff69b4,#800080);
+  box-shadow:0 0 35px gold;
+  z-index:10;
 }
-
-.tabs {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  background: #12121c;
-  padding: 14px;
-  flex-wrap: wrap;
+header h1{
+  font-size:2.2em;margin:0;font-weight:bold;
+  animation:headerColors 6s linear infinite;
 }
-
-.tabs button {
-  background: #1c1c2b;
-  border: none;
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
+@keyframes headerColors{
+  0%{color:yellow;}
+  20%{color:pink;}
+  40%{color:magenta;}
+  60%{color:purple;}
+  80%{color:white;}
+  100%{color:yellow;}
 }
-
-.tabs button.active {
-  background: linear-gradient(135deg, #ff4fd8, #7b4dff);
+nav{margin-top:12px;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;position:relative;z-index:10;}
+nav button{
+  margin:2px;padding:10px 16px;border-radius:14px;border:none;
+  font-weight:bold;background:linear-gradient(45deg,#ff69b4,#800080);
+  cursor:pointer;box-shadow:0 0 16px gold;transition:.3s;
 }
-
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 30px 20px;
+nav button:hover{transform:scale(1.1) rotate(-2deg);box-shadow:0 0 25px gold,0 0 20px #fff inset;}
+.tab{display:none;padding:24px;text-align:center;position:relative;z-index:5;font-weight:bold;}
+.tab.active{display:block;animation:fade 1s;}
+@keyframes fade{0%{opacity:0}100%{opacity:1}}
+#shopGrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:12px;}
+.item{background:rgba(255,255,255,.9);color:black;border-radius:16px;padding:16px;
+box-shadow:0 0 20px gold;font-weight:bold;transition:.3s;}
+.item:hover{transform:scale(1.1) rotate(-2deg);box-shadow:0 0 30px gold,0 0 30px #ff69b4 inset;}
+#login{
+  position:fixed;inset:0;
+  display:flex;align-items:center;justify-content:center;
+  z-index:20;
+  background:transparent;
 }
-
-.tab { display: none; }
-.tab.active { display: block; }
-
-.card {
-  background: #161625;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #2a2a40;
+.login-card{
+  background:linear-gradient(160deg,#ffffff,#ff69b4,#ff00ff,#800080);
+  padding:60px;border-radius:26px;
+  box-shadow:0 0 70px gold, inset 0 0 35px #ff69b4;
+  text-align:center;animation:poplogin 1s ease-out;
+  z-index:20;
 }
-
-.payment-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
-  gap: 15px;
+@keyframes poplogin{0%{transform:scale(.5);opacity:0}100%{transform:scale(1);opacity:1}}
+.login-card input{width:100%;padding:18px;margin:12px 0;border-radius:14px;border:1px solid #000;background:white;color:black;font-weight:bold;}
+.login-card button{
+  margin-top:16px;padding:18px 28px;font-weight:bold;border:none;border-radius:18px;
+  background:linear-gradient(45deg,#ff69b4,#800080);
+  box-shadow:0 0 35px gold;cursor:pointer;transition:.3s;
 }
-
-.payment {
-  background: linear-gradient(135deg, #ff4fd8, #7b4dff);
-  padding: 16px;
-  border-radius: 8px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.action {
-  width: 100%;
-  padding: 12px;
-  background: linear-gradient(135deg, #ff4fd8, #7b4dff);
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-input {
-  width: 100%;
-  padding: 12px;
-  margin-top: 10px;
-  background: #0f0f18;
-  border: 1px solid #333;
-  color: #fff;
-  border-radius: 6px;
-}
-
-.status-row {
-  display: flex;
-  justify-content: space-between;
-  padding: 10px 0;
-  border-bottom: 1px solid #2a2a40;
-}
-
-.online { color: #2bff88; }
-.offline { color: #ff4f4f; }
-.maintenance { color: #ffc94f; }
-
-footer {
-  text-align: center;
-  opacity: 0.6;
-  padding: 25px;
-  font-size: 0.9rem;
-}
+.login-card button:hover{transform:scale(1.1) rotate(-2deg);filter:brightness(1.3);}
+#snow{position:fixed;inset:0;pointer-events:none;z-index:0;}
+.snowflake{position:absolute;color:white;font-weight:bold;opacity:.9;text-shadow:0 0 4px gold,0 0 8px #ff0;font-size:14px;}
 </style>
 </head>
-
 <body>
 
+<div id="snow"></div>
+
+<div id="login">
+  <div class="login-card">
+    <h2>!𝙋𝚁𝙊𝙅𝙀𝙏 𝓟𝓻𝓸𝓽𝓸𝓷! 🎄😈</h2>
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+    <button onclick="enterSite()">ENTER GRINCH LAIR</button>
+  </div>
+</div>
+
 <header>
-  <h1>Proton Donations</h1>
-  <p>Official Proton Purchase & Support Portal</p>
+  <h1>!𝙋𝚁𝙊𝙅𝙀𝙏 𝓟𝓻𝓸𝓽𝓸𝓷!</h1>
+  <nav>
+    <button onclick="openTab('overview')">OVERVIEW</button>
+    <button onclick="openTab('updates')">UPDATES</button>
+    <button onclick="openTab('rules')">RULES</button>
+    <button onclick="openTab('team')">TEAM</button>
+    <button onclick="openTab('media')">MEDIA</button>
+    <button onclick="openTab('gallery')">GALLERY</button>
+    <button onclick="openTab('map')">MAP</button>
+    <button onclick="openTab('shop')">ITEM SHOP</button>
+    <button onclick="openTab('donate')">DONATE</button>
+    <button onclick="openTab('discord')">DISCORD</button>
+    <button onclick="openTab('ideas')">IDEAS</button>
+    <button onclick="openTab('status')">STATUS</button>
+    <button onclick="openTab('download')">DOWNLOAD</button>
+  </nav>
 </header>
 
-<div class="tabs">
-  <button class="active" onclick="openTab('purchase', this)">Purchase</button>
-  <button onclick="openTab('redeem', this)">Redeem</button>
-  <button onclick="openTab('status', this)">Server Status</button>
-  <button onclick="openTab('tos', this)">Terms</button>
-  <button onclick="openTab('login', this)">Login</button>
+<div class="tab active" id="overview">
+  <h2>Merry Mischief — Chapter 2 Season 2 🎄😈</h2>
+  <p><strong>Custom Guns Maker:</strong> 348 Cooper</p>
+  <p>Full Grinch chaos, snowstorms, buffs, and festive mischief!</p>
 </div>
 
-<div class="container">
+<div class="tab" id="updates"><h2>Updates 🎁</h2><p>✔ Holiday weapons buffed<br>✔ Ultra gradient background<br>✔ Gold + white snowflakes<br>✔ Bold text everywhere</p></div>
 
-<div id="purchase" class="tab active">
-  <div class="card">
-    <h2>Accepted Payment Methods</h2>
-    <div class="payment-grid">
-      <div class="payment">PayPal<br>Friends & Family ONLY</div>
-      <div class="payment">Cash App</div>
-    </div>
-    <p style="color:#ff9b9b;font-weight:bold;">
-      Goods & Services payments will NOT be accepted.
-    </p>
-  </div>
+<div class="tab" id="rules"><h2>Rules 📜</h2><p>No cheats • Respect others • Spread festive chaos</p></div>
+
+<div class="tab" id="team"><h2>Team 💚</h2><p><strong>Founder / Dev:</strong> YoBrodyyyyy<br><strong>Custom Guns:</strong> 348 Cooper</p></div>
+
+<div class="tab" id="media"><h2>Media 🎥</h2>
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/jVBfWvLWgzs" frameborder="0" allowfullscreen></iframe>
 </div>
 
-<div id="redeem" class="tab">
-  <div class="card">
-    <h2>Redeem Code</h2>
-    <input type="text" placeholder="PROTON-XXXX-XXXX">
-    <button class="action">Redeem Code</button>
-  </div>
+<div class="tab" id="gallery"><h2>Gallery 📸</h2>
+<img src="https://wallpapers.com/images/featured/fortnite-chapter2-epic-battle-y5s3zl1cf3ymv3v2.webp" width="300">
+<img src="https://wallpapers.com/images/featured/fortnite-chapter2-character-lineup.webp" width="300">
+<img src="https://wallpapers.com/images/featured/fortnite-chapter2-combine-challenge.webp" width="300">
 </div>
 
-<div id="status" class="tab">
-  <div class="card">
-    <h2>Server Status</h2>
-    <div class="status-row"><span>Authentication</span><span class="online">ONLINE</span></div>
-    <div class="status-row"><span>Game Servers</span><span class="online">ONLINE</span></div>
-    <div class="status-row"><span>Backend</span><span class="maintenance">MAINTENANCE</span></div>
-  </div>
+<div class="tab" id="map"><h2>Map 🗺</h2>
+<img src="https://media.discordapp.net/attachments/1434613073490087996/1452769159355039855/3acf6fe9-b8c7-4ca5-8e5e-0bb885ce8b86-fortnite-map.avif" width="500">
 </div>
 
-<div id="login" class="tab">
-  <div class="card">
-    <h2>Discord Verification</h2>
-    <a class="action"
-       href="https://discord.com/oauth2/authorize?client_id=YOUR_DISCORD_CLIENT_ID&response_type=code&scope=identify">
-       Login with Discord
-    </a>
-  </div>
+<div class="tab" id="shop"><h2>Item Shop 🎁</h2><div id="shopGrid"></div></div>
+
+<div class="tab" id="donate"><h2>Donate 💖</h2>
+<a href="https://project-exit-store-verified.mysellauth.com/" target="_blank"><strong>Support PROJECT PROTON</strong></a>
 </div>
 
-<div id="tos" class="tab">
-  <div class="card">
-    <h2>Terms of Service</h2>
-    <ul>
-      <li>All donations are final and non-refundable.</li>
-      <li>Only PayPal Friends & Family and Cash App are accepted.</li>
-      <li>Only USD and EUR currencies are supported.</li>
-      <li>Chargebacks result in permanent bans.</li>
-      <li>Rewards are digital and non-transferable.</li>
-    </ul>
-  </div>
+<div class="tab" id="discord"><h2>Discord 💬</h2>
+<a href="https://discord.gg/JvE6QBMg4p" target="_blank"><strong>Join Server</strong></a>
 </div>
 
+<div class="tab" id="ideas"><h2>Ideas 💡</h2>
+<a href="mailto:treyblackout@gmail.com?subject=Merry%20Mischief%20Idea" style="color:#ff0;font-weight:bold;">Send Ideas via Email</a>
 </div>
 
-<footer>
-  © 2025 Proton • All rights reserved
-</footer>
+<div class="tab" id="status"><h2>Status ✅</h2><p>Servers Online • Snowstorm Active • Mischief Level: MAX</p></div>
+
+<div class="tab" id="download"><h2>Download ⬇</h2>
+<a href="https://r2.cbn.lol/++Fortnite+Release-12.41-CL-12905909-Windows.zip" target="_blank"><strong>DOWNLOAD BUILD 12.41</strong></a>
+</div>
 
 <script>
-function openTab(id, btn) {
-  document.querySelectorAll(".tab").forEach(t => t.classList.remove("active"));
-  document.querySelectorAll(".tabs button").forEach(b => b.classList.remove("active"));
-  document.getElementById(id).classList.add("active");
-  btn.classList.add("active");
-}
-</script>
+function enterSite(){document.getElementById('login').style.display='none';}
+function openTab(id){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));document.getElementById(id).classList.add('active');}
 
+/* Optimized snow */
+const snowContainer=document.getElementById('snow');
+const snowflakes=[];
+for(let i=0;i<30;i++){
+  const s=document.createElement('div');s.className='snowflake';
+  s.innerHTML=Math.random()<0.2?'❄':'✨';
+  s.style.left=Math.random()*100+'%';
+  s.style.top=Math.random()*-100+'px';
+  s.style.fontSize=12+Math.random()*20+'px';
+  snowContainer.appendChild(s);
+  snowflakes.push({el:s,y:parseFloat(s.style.top),speed:1+Math.random()*2});
+}
+setInterval(()=>{
+  snowflakes.forEach(f=>{
+    f.y+=f.speed;
+    if(f.y>window.innerHeight) f.y=-20;
+    f.el.style.top=f.y+'px';
+  });
+},30);
+
+/* Shop */
+const shopItems=['GRINCH AXE','MEAN GREEN PUMP','NAUGHTY SMG','CANDY CANE SNIPER','FESTIVE ROCKET','HOLLY GRENADE'];
+const grid=document.getElementById('shopGrid');
+shopItems.forEach(i=>grid.innerHTML+=`<div class="item"><strong>${i}</strong></div>`);
+</script>
 </body>
 </html>
